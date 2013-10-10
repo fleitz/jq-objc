@@ -2,7 +2,7 @@ Objective-C JQ Wrapper
 ======================
 
 Wraps http://stedolan.github.io/jq/tutorial/ in Objective-C
-
+## Input
 ```ObjC
 // Input
  NSString* json =  @"[{\
@@ -50,16 +50,18 @@ Wraps http://stedolan.github.io/jq/tutorial/ in Objective-C
         }\
         }\
     ]";
-    
-// Lets get all the glossary titles in an array
+```
+## Get all the glossary titles in an array
+```ObjC
     NSString* output = [json jq:@"[.[] | .glossary.title]"]; 
-
-
-// Output
     NSLog(@"%@",output);
+```
+## Results
+```json
 [
   "example glossary",
   "Glossary 2"
 ]
 
 ```
+
