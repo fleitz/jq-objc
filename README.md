@@ -1,8 +1,8 @@
-jq-objc
-=======
-
 Objective-C JQ Wrapper
+======================
+
 Wraps http://stedolan.github.io/jq/tutorial/ in Objective-C
+
 ```ObjC
 // Input
  NSString* json =  @"[{\
