@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-
+#import "NSData+JQ.h"
 @interface libjqTests : XCTestCase
 
 @end
@@ -28,7 +28,13 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+   
+    NSData* test = [NSData dataWithContentsOfFile: [[NSBundle bundleForClass:[self class]] pathForResource:@"test" ofType:@"json"]];
+    NSData* output = [NSData dataWithContentsOfFile: [[NSBundle bundleForClass:[self class]] pathForResource:@"output" ofType:@"json"]];
+    XCTAssertTrue([test length] > 1000,@"Must have data");
+    XCTAssertTrue([output length] > 900,@"Must have data");
+    NSData* testOutput = [test jq:@"[.data[] | { name } | .]" withOptions:0];
+    XCTAssertEqual([testOutput length], [output length], @"Should be same length");
 }
 
 @end

@@ -8,14 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		B6E44DDD180664F800D04EF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E44DDC180664F800D04EF3 /* Foundation.framework */; };
-		B6E44DE2180664F800D04EF3 /* libjq.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B6E44DE1180664F800D04EF3 /* libjq.h */; };
-		B6E44DE4180664F800D04EF3 /* libjq.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E44DE3180664F800D04EF3 /* libjq.m */; };
 		B6E44DEB180664F800D04EF3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E44DEA180664F800D04EF3 /* XCTest.framework */; };
 		B6E44DEC180664F800D04EF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E44DDC180664F800D04EF3 /* Foundation.framework */; };
 		B6E44DEE180664F800D04EF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E44DED180664F800D04EF3 /* UIKit.framework */; };
 		B6E44DF1180664F800D04EF3 /* liblibjq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E44DD9180664F800D04EF3 /* liblibjq.a */; };
 		B6E44DF7180664F800D04EF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6E44DF5180664F800D04EF3 /* InfoPlist.strings */; };
 		B6E44DF9180664F800D04EF3 /* libjqTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E44DF8180664F800D04EF3 /* libjqTests.m */; };
+		B6E44E271806693400D04EF3 /* builtin.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E031806693400D04EF3 /* builtin.c */; };
+		B6E44E281806693400D04EF3 /* bytecode.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E051806693400D04EF3 /* bytecode.c */; };
+		B6E44E291806693400D04EF3 /* compile.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E071806693400D04EF3 /* compile.c */; };
+		B6E44E2A1806693400D04EF3 /* execute.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E0A1806693400D04EF3 /* execute.c */; };
+		B6E44E2B1806693400D04EF3 /* jq_test.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E0F1806693400D04EF3 /* jq_test.c */; };
+		B6E44E2C1806693400D04EF3 /* jv.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E101806693400D04EF3 /* jv.c */; };
+		B6E44E2D1806693400D04EF3 /* jv_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E121806693400D04EF3 /* jv_alloc.c */; };
+		B6E44E2E1806693400D04EF3 /* jv_aux.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E141806693400D04EF3 /* jv_aux.c */; };
+		B6E44E2F1806693400D04EF3 /* jv_dtoa.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E161806693400D04EF3 /* jv_dtoa.c */; };
+		B6E44E301806693400D04EF3 /* jv_parse.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E181806693400D04EF3 /* jv_parse.c */; };
+		B6E44E311806693400D04EF3 /* jv_print.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E1A1806693400D04EF3 /* jv_print.c */; };
+		B6E44E321806693400D04EF3 /* jv_unicode.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E1B1806693400D04EF3 /* jv_unicode.c */; };
+		B6E44E331806693400D04EF3 /* lexer.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E1E1806693400D04EF3 /* lexer.c */; };
+		B6E44E341806693400D04EF3 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E211806693400D04EF3 /* main.c */; };
+		B6E44E351806693400D04EF3 /* opcode.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E221806693400D04EF3 /* opcode.c */; };
+		B6E44E361806693400D04EF3 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E251806693400D04EF3 /* parser.c */; };
+		B6E44E3C18066BCD00D04EF3 /* NSData+JQ.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E44E3B18066BCD00D04EF3 /* NSData+JQ.m */; };
+		B6E44E3E180672DF00D04EF3 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = B6E44E3D180672D800D04EF3 /* test.json */; };
+		B6E44E4018067D4E00D04EF3 /* output.json in Resources */ = {isa = PBXBuildFile; fileRef = B6E44E3F180675DB00D04EF3 /* output.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +52,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				B6E44DE2180664F800D04EF3 /* libjq.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,14 +61,52 @@
 		B6E44DD9180664F800D04EF3 /* liblibjq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibjq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E44DDC180664F800D04EF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B6E44DE0180664F800D04EF3 /* libjq-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libjq-Prefix.pch"; sourceTree = "<group>"; };
-		B6E44DE1180664F800D04EF3 /* libjq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libjq.h; sourceTree = "<group>"; };
-		B6E44DE3180664F800D04EF3 /* libjq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libjq.m; sourceTree = "<group>"; };
 		B6E44DE9180664F800D04EF3 /* libjqTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libjqTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E44DEA180664F800D04EF3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B6E44DED180664F800D04EF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B6E44DF4180664F800D04EF3 /* libjqTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "libjqTests-Info.plist"; sourceTree = "<group>"; };
 		B6E44DF6180664F800D04EF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B6E44DF8180664F800D04EF3 /* libjqTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libjqTests.m; sourceTree = "<group>"; };
+		B6E44E031806693400D04EF3 /* builtin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = builtin.c; sourceTree = "<group>"; };
+		B6E44E041806693400D04EF3 /* builtin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = builtin.h; sourceTree = "<group>"; };
+		B6E44E051806693400D04EF3 /* bytecode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bytecode.c; sourceTree = "<group>"; };
+		B6E44E061806693400D04EF3 /* bytecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bytecode.h; sourceTree = "<group>"; };
+		B6E44E071806693400D04EF3 /* compile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compile.c; sourceTree = "<group>"; };
+		B6E44E081806693400D04EF3 /* compile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compile.h; sourceTree = "<group>"; };
+		B6E44E091806693400D04EF3 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		B6E44E0A1806693400D04EF3 /* execute.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = execute.c; sourceTree = "<group>"; };
+		B6E44E0B1806693400D04EF3 /* execute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = execute.h; sourceTree = "<group>"; };
+		B6E44E0C1806693400D04EF3 /* forkable_stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = forkable_stack.h; sourceTree = "<group>"; };
+		B6E44E0D1806693400D04EF3 /* frame_layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frame_layout.h; sourceTree = "<group>"; };
+		B6E44E0E1806693400D04EF3 /* jq_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jq_parser.h; sourceTree = "<group>"; };
+		B6E44E0F1806693400D04EF3 /* jq_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jq_test.c; sourceTree = "<group>"; };
+		B6E44E101806693400D04EF3 /* jv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jv.c; sourceTree = "<group>"; };
+		B6E44E111806693400D04EF3 /* jv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jv.h; sourceTree = "<group>"; };
+		B6E44E121806693400D04EF3 /* jv_alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jv_alloc.c; sourceTree = "<group>"; };
+		B6E44E131806693400D04EF3 /* jv_alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jv_alloc.h; sourceTree = "<group>"; };
+		B6E44E141806693400D04EF3 /* jv_aux.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jv_aux.c; sourceTree = "<group>"; };
+		B6E44E151806693400D04EF3 /* jv_aux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jv_aux.h; sourceTree = "<group>"; };
+		B6E44E161806693400D04EF3 /* jv_dtoa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jv_dtoa.c; sourceTree = "<group>"; };
+		B6E44E171806693400D04EF3 /* jv_dtoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jv_dtoa.h; sourceTree = "<group>"; };
+		B6E44E181806693400D04EF3 /* jv_parse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jv_parse.c; sourceTree = "<group>"; };
+		B6E44E191806693400D04EF3 /* jv_parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jv_parse.h; sourceTree = "<group>"; };
+		B6E44E1A1806693400D04EF3 /* jv_print.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jv_print.c; sourceTree = "<group>"; };
+		B6E44E1B1806693400D04EF3 /* jv_unicode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jv_unicode.c; sourceTree = "<group>"; };
+		B6E44E1C1806693400D04EF3 /* jv_unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jv_unicode.h; sourceTree = "<group>"; };
+		B6E44E1D1806693400D04EF3 /* jv_utf8_tables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jv_utf8_tables.h; sourceTree = "<group>"; };
+		B6E44E1E1806693400D04EF3 /* lexer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lexer.c; sourceTree = "<group>"; };
+		B6E44E1F1806693400D04EF3 /* lexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lexer.h; sourceTree = "<group>"; };
+		B6E44E201806693400D04EF3 /* locfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locfile.h; sourceTree = "<group>"; };
+		B6E44E211806693400D04EF3 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		B6E44E221806693400D04EF3 /* opcode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = opcode.c; sourceTree = "<group>"; };
+		B6E44E231806693400D04EF3 /* opcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opcode.h; sourceTree = "<group>"; };
+		B6E44E241806693400D04EF3 /* opcode_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opcode_list.h; sourceTree = "<group>"; };
+		B6E44E251806693400D04EF3 /* parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
+		B6E44E261806693400D04EF3 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		B6E44E3A18066BCD00D04EF3 /* NSData+JQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JQ.h"; sourceTree = "<group>"; };
+		B6E44E3B18066BCD00D04EF3 /* NSData+JQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JQ.m"; sourceTree = "<group>"; };
+		B6E44E3D180672D800D04EF3 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		B6E44E3F180675DB00D04EF3 /* output.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = output.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +135,7 @@
 		B6E44DD0180664F700D04EF3 = {
 			isa = PBXGroup;
 			children = (
+				B6E44E021806693400D04EF3 /* src */,
 				B6E44DDE180664F800D04EF3 /* libjq */,
 				B6E44DF2180664F800D04EF3 /* libjqTests */,
 				B6E44DDB180664F800D04EF3 /* Frameworks */,
@@ -110,9 +165,9 @@
 		B6E44DDE180664F800D04EF3 /* libjq */ = {
 			isa = PBXGroup;
 			children = (
-				B6E44DE1180664F800D04EF3 /* libjq.h */,
-				B6E44DE3180664F800D04EF3 /* libjq.m */,
 				B6E44DDF180664F800D04EF3 /* Supporting Files */,
+				B6E44E3A18066BCD00D04EF3 /* NSData+JQ.h */,
+				B6E44E3B18066BCD00D04EF3 /* NSData+JQ.m */,
 			);
 			path = libjq;
 			sourceTree = "<group>";
@@ -128,6 +183,8 @@
 		B6E44DF2180664F800D04EF3 /* libjqTests */ = {
 			isa = PBXGroup;
 			children = (
+				B6E44E3F180675DB00D04EF3 /* output.json */,
+				B6E44E3D180672D800D04EF3 /* test.json */,
 				B6E44DF8180664F800D04EF3 /* libjqTests.m */,
 				B6E44DF3180664F800D04EF3 /* Supporting Files */,
 			);
@@ -141,6 +198,49 @@
 				B6E44DF5180664F800D04EF3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6E44E021806693400D04EF3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B6E44E031806693400D04EF3 /* builtin.c */,
+				B6E44E041806693400D04EF3 /* builtin.h */,
+				B6E44E051806693400D04EF3 /* bytecode.c */,
+				B6E44E061806693400D04EF3 /* bytecode.h */,
+				B6E44E071806693400D04EF3 /* compile.c */,
+				B6E44E081806693400D04EF3 /* compile.h */,
+				B6E44E091806693400D04EF3 /* config.h */,
+				B6E44E0A1806693400D04EF3 /* execute.c */,
+				B6E44E0B1806693400D04EF3 /* execute.h */,
+				B6E44E0C1806693400D04EF3 /* forkable_stack.h */,
+				B6E44E0D1806693400D04EF3 /* frame_layout.h */,
+				B6E44E0E1806693400D04EF3 /* jq_parser.h */,
+				B6E44E0F1806693400D04EF3 /* jq_test.c */,
+				B6E44E101806693400D04EF3 /* jv.c */,
+				B6E44E111806693400D04EF3 /* jv.h */,
+				B6E44E121806693400D04EF3 /* jv_alloc.c */,
+				B6E44E131806693400D04EF3 /* jv_alloc.h */,
+				B6E44E141806693400D04EF3 /* jv_aux.c */,
+				B6E44E151806693400D04EF3 /* jv_aux.h */,
+				B6E44E161806693400D04EF3 /* jv_dtoa.c */,
+				B6E44E171806693400D04EF3 /* jv_dtoa.h */,
+				B6E44E181806693400D04EF3 /* jv_parse.c */,
+				B6E44E191806693400D04EF3 /* jv_parse.h */,
+				B6E44E1A1806693400D04EF3 /* jv_print.c */,
+				B6E44E1B1806693400D04EF3 /* jv_unicode.c */,
+				B6E44E1C1806693400D04EF3 /* jv_unicode.h */,
+				B6E44E1D1806693400D04EF3 /* jv_utf8_tables.h */,
+				B6E44E1E1806693400D04EF3 /* lexer.c */,
+				B6E44E1F1806693400D04EF3 /* lexer.h */,
+				B6E44E201806693400D04EF3 /* locfile.h */,
+				B6E44E211806693400D04EF3 /* main.c */,
+				B6E44E221806693400D04EF3 /* opcode.c */,
+				B6E44E231806693400D04EF3 /* opcode.h */,
+				B6E44E241806693400D04EF3 /* opcode_list.h */,
+				B6E44E251806693400D04EF3 /* parser.c */,
+				B6E44E261806693400D04EF3 /* parser.h */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E44DF7180664F800D04EF3 /* InfoPlist.strings in Resources */,
+				B6E44E3E180672DF00D04EF3 /* test.json in Resources */,
+				B6E44E4018067D4E00D04EF3 /* output.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +326,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E44DE4180664F800D04EF3 /* libjq.m in Sources */,
+				B6E44E2D1806693400D04EF3 /* jv_alloc.c in Sources */,
+				B6E44E291806693400D04EF3 /* compile.c in Sources */,
+				B6E44E2C1806693400D04EF3 /* jv.c in Sources */,
+				B6E44E321806693400D04EF3 /* jv_unicode.c in Sources */,
+				B6E44E311806693400D04EF3 /* jv_print.c in Sources */,
+				B6E44E2A1806693400D04EF3 /* execute.c in Sources */,
+				B6E44E3C18066BCD00D04EF3 /* NSData+JQ.m in Sources */,
+				B6E44E361806693400D04EF3 /* parser.c in Sources */,
+				B6E44E341806693400D04EF3 /* main.c in Sources */,
+				B6E44E281806693400D04EF3 /* bytecode.c in Sources */,
+				B6E44E331806693400D04EF3 /* lexer.c in Sources */,
+				B6E44E271806693400D04EF3 /* builtin.c in Sources */,
+				B6E44E2F1806693400D04EF3 /* jv_dtoa.c in Sources */,
+				B6E44E2E1806693400D04EF3 /* jv_aux.c in Sources */,
+				B6E44E2B1806693400D04EF3 /* jq_test.c in Sources */,
+				B6E44E351806693400D04EF3 /* opcode.c in Sources */,
+				B6E44E301806693400D04EF3 /* jv_parse.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +486,12 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "libjqTests/libjqTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -385,6 +509,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libjq/libjq-Prefix.pch";
 				INFOPLIST_FILE = "libjqTests/libjqTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
